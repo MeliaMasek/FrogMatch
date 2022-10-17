@@ -7,7 +7,6 @@ public class TransformBehavior : MonoBehaviour
     {
         transform.position = Vector3.zero;
     }
-
     public void SetV3Value()
     {
         v3data.value = transform.position;
