@@ -12,11 +12,17 @@ EditorBuildSettings:
     path: Assets/Scenes/FrogHome.unity
     guid: 110d81f20ac7c9d40a7ba0a12f6c98f7
   - enabled: 1
-    path: Assets/Scenes/FrogMatch.unity
-    guid: d616cbec47de38c41b241470e4c9be25
-  - enabled: 1
     path: Assets/Scenes/FrogIndex.unity
     guid: 90bed59f54fc99d41a78a33ecba0d51e
+  - enabled: 1
+    path: Assets/Scenes/FrogMatchEasy.unity
+    guid: d616cbec47de38c41b241470e4c9be25
+  - enabled: 1
+    path: Assets/Scenes/FrogMatchMedium.unity
+    guid: 17aa7af426285e249ae6e3fbe4fdba41
+  - enabled: 1
+    path: Assets/Scenes/FrogMatchHard.unity
+    guid: c3fb94b813de7f94394adf7e992dde9c
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 15d60d4db7250994d8367216eca40bc7, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 5b731ecf900f1fd4f8ff4402de3395f2, type: 2}
