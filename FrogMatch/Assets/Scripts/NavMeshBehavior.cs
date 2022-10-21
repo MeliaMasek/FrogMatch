@@ -1,9 +1,8 @@
-using System;
 using UnityEngine;
 using UnityEngine.AI;
 
 [RequireComponent((typeof(NavMeshAgent)))]
-public class NavMeshBehavoir : MonoBehaviour
+public class NavMeshBehavior : MonoBehaviour
 {
     private NavMeshAgent agent;
     public Vector3Data playerloc;
