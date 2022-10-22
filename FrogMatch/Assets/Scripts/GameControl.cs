@@ -8,8 +8,9 @@ public class GameControl : MonoBehaviour
     List<int> frontIndex = new() {0, 1, 2, 3, 4, 0, 1, 2, 3, 4};
     public static System.Random rnd = new();
     public int shuffleNum = 0;
-    int[] visibleFront = { -1, -2 }; 
-    
+    int[] visibleFront = { -1, -2 };
+    public AudioSource MatchSound;
+
     void Start()
     {
         int startTotal = frontIndex.Count;
@@ -29,6 +30,7 @@ public class GameControl : MonoBehaviour
             }
         }
         card.GetComponent<CardFlip>().frontIndex = frontIndex[0];
+        
     }
 
     public bool TwoCards()
@@ -69,6 +71,7 @@ public class GameControl : MonoBehaviour
             visibleFront[0] = -1;
             visibleFront[1] = -2;
             match = true;
+            MatchSound.Play();
         }
         return match;
     }

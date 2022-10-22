@@ -9,7 +9,8 @@ public class CardFlip : MonoBehaviour
     public Sprite back;
     public int frontIndex;
     public bool matched = false;
-    
+    public AudioSource NoMatchSound;
+
     public void OnMouseDown()
     {
         if (matched == false)
@@ -21,6 +22,11 @@ public class CardFlip : MonoBehaviour
                     card.sprite = fronts[frontIndex];
                     gamecontrol.GetComponent<GameControl>().AddVisibleFace(frontIndex);
                     matched = gamecontrol.GetComponent<GameControl>().CheckMatch();
+                    
+                    if (gamecontrol.GetComponent<GameControl>().TwoCards() == true && matched == false)
+                    {
+                        NoMatchSound.Play();
+                    }
                 }
             }
             else
