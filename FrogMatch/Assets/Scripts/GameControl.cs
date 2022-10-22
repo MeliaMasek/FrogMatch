@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameControl : MonoBehaviour
 {
     GameObject card;
-    List<int> frontIndex = new() {0, 1, 2, 3, 0, 1, 2, 3};
+    List<int> frontIndex = new() {0, 1, 2, 3, 4, 0, 1, 2, 3, 4};
     public static System.Random rnd = new();
     public int shuffleNum = 0;
     int[] visibleFront = { -1, -2 }; 
@@ -13,12 +13,12 @@ public class GameControl : MonoBehaviour
     void Start()
     {
         int startTotal = frontIndex.Count;
-        float xPos = 1f;
+        float xPos = 4f;
         float yPos = 1.25f;
-        for(int i = 0; i < 7; i++)
+        for(int i = 0; i < (startTotal - 1); i++)
         {
             shuffleNum = rnd.Next(0, (frontIndex.Count));
-            var temp = Instantiate(card, new Vector3(xPos, yPos, 0),        Quaternion.identity);
+            var temp = Instantiate(card, new Vector3(xPos, yPos, 0),Quaternion.identity);
             temp.GetComponent<CardFlip>().frontIndex = frontIndex[shuffleNum];
             frontIndex.Remove(frontIndex[shuffleNum]);
             xPos = xPos + 3;
@@ -37,7 +37,7 @@ public class GameControl : MonoBehaviour
         return cardsup;
     }
 
-    public void AddVisableFace(int index)
+    public void AddVisibleFace(int index)
     {
         if (visibleFront[0] == -1)
         {
@@ -49,7 +49,7 @@ public class GameControl : MonoBehaviour
         }
     }
 
-    public void RemoveVisableFace(int index)
+    public void RemoveVisibleFace(int index)
     {
         if (visibleFront[0] == index)
         {

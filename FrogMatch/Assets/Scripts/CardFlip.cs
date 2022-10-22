@@ -19,14 +19,14 @@ public class CardFlip : MonoBehaviour
                 if (gamecontrol.GetComponent<GameControl>().TwoCards() == false)
                 {
                     card.sprite = fronts[frontIndex];
-                    gamecontrol.GetComponent<GameControl>().AddVisableFace(frontIndex);
+                    gamecontrol.GetComponent<GameControl>().AddVisibleFace(frontIndex);
                     matched = gamecontrol.GetComponent<GameControl>().CheckMatch();
                 }
             }
             else
             {
                 card.sprite = back;
-                gamecontrol.GetComponent<GameControl>().RemoveVisableFace(frontIndex);
+                gamecontrol.GetComponent<GameControl>().RemoveVisibleFace(frontIndex);
             }
         }
     }
