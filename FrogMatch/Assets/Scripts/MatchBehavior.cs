@@ -33,7 +33,7 @@ public class MatchBehavior : MonoBehaviour
         }
     }
     */
-    private IEnumerator OnMouseUp()
+    private IEnumerator OnMouseDown()
     {
         //Debug.Log(idObj);
         //Debug.Log(other.GetComponent<IdContainerBehavior>().idObj);
@@ -42,7 +42,7 @@ public class MatchBehavior : MonoBehaviour
         if (tempObj == null)
             yield break;
 
-        var otherId = tempObj.idObj;
+        var otherId = tempObj;
         if (otherId == idObj)
         {
             //Debug.Log("Match");

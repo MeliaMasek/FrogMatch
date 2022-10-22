@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6bc0e2dd29c9514086dd525e646af47, type: 3}
   m_Name: FlyLocation
   m_EditorClassIdentifier: 
-  value: {x: -2, y: 4.5, z: 0}
+  value: {x: 2, y: 5, z: 0}
