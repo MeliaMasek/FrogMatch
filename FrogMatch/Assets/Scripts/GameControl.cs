@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-//Code borrowed from https://github.com/kurtkaiser/MemoryVideoTutorial
+//Code borrowed from https://github.com/kurtkaiser/MemoryVideoTutorial/blob/master/Scriptes/GameControl.cs//
 public class GameControl : MonoBehaviour
 {
     GameObject card;
