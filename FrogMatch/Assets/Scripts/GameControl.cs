@@ -11,14 +11,18 @@ public class GameControl : MonoBehaviour
     public int shuffleNum = 0;
     int[] visibleFront = { -1, -2 };
     public AudioSource MatchSound;
-    public int clicks;
+    private int clicks;
+    private int clicksHigh;
     public Text scoreLabel;
+    public Text scoreLabelHigh;
     public Sprite back;
+    public Animator Gameover;
 
     public void Start()
     {
+        Gameover.Play("GameoverOff");
         int startTotal = frontIndex.Count;
-        float xPos = -5f;
+        float xPos = -3f;
         float yPos = 2f;
         for (int i = 0; i < (startTotal - 1); i++)
         {
@@ -29,7 +33,7 @@ public class GameControl : MonoBehaviour
             xPos = xPos + 3;
             if (i == (startTotal / 2 - 2))
             {
-                xPos = -8f;
+                xPos = -6f;
                 yPos = -2f;
             }
         }
@@ -69,10 +73,13 @@ public class GameControl : MonoBehaviour
     public bool CheckMatch()
     {
         bool match = false;
+        //Gameover.Play("GameoverOff");
+
         if (Input.GetMouseButtonDown(0))
             clicks++;
-        scoreLabel.text = " " + clicks;
-        
+        scoreLabel.text = " " + (10 - clicks);
+        scoreLabelHigh.text = " " + (10 - clicksHigh);
+
         if (visibleFront[0] == visibleFront[1])
         {
             visibleFront[0] = -1;
