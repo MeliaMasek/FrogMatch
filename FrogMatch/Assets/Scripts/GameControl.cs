@@ -1,36 +1,39 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 //Code borrowed from https://github.com/kurtkaiser/MemoryVideoTutorial/blob/master/Scriptes/GameControl.cs//
 public class GameControl : MonoBehaviour
 {
     GameObject card;
-    List<int> frontIndex = new() {0, 1, 2, 3, 4, 0, 1, 2, 3, 4};
+    List<int> frontIndex = new() { 0, 1, 2, 3, 4, 0, 1, 2, 3, 4 };
     public static System.Random rnd = new();
     public int shuffleNum = 0;
     int[] visibleFront = { -1, -2 };
     public AudioSource MatchSound;
+    public int clicks;
+    public Text scoreLabel;
+    public Sprite back;
 
-    void Start()
+    public void Start()
     {
         int startTotal = frontIndex.Count;
-        float xPos = 4f;
-        float yPos = 1.25f;
-        for(int i = 0; i < (startTotal - 1); i++)
+        float xPos = -5f;
+        float yPos = 2f;
+        for (int i = 0; i < (startTotal - 1); i++)
         {
             shuffleNum = rnd.Next(0, (frontIndex.Count));
-            var temp = Instantiate(card, new Vector3(xPos, yPos, 0),Quaternion.identity);
+            var temp = Instantiate(card, new Vector3(xPos, yPos, 0), Quaternion.identity);
             temp.GetComponent<CardFlip>().frontIndex = frontIndex[shuffleNum];
             frontIndex.Remove(frontIndex[shuffleNum]);
             xPos = xPos + 3;
-            if (i == (startTotal/2 - 2))
+            if (i == (startTotal / 2 - 2))
             {
-                xPos = 1f;
+                xPos = -8f;
                 yPos = -2f;
             }
         }
         card.GetComponent<CardFlip>().frontIndex = frontIndex[0];
-        
     }
 
     public bool TwoCards()
@@ -66,16 +69,21 @@ public class GameControl : MonoBehaviour
     public bool CheckMatch()
     {
         bool match = false;
+        if (Input.GetMouseButtonDown(0))
+            clicks++;
+        scoreLabel.text = " " + clicks;
+        
         if (visibleFront[0] == visibleFront[1])
         {
             visibleFront[0] = -1;
             visibleFront[1] = -2;
             match = true;
             MatchSound.Play();
+
         }
         return match;
     }
-    
+
     private void Awake()
     {
         card = GameObject.Find("Card");

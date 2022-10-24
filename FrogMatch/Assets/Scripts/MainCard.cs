@@ -3,8 +3,8 @@ using UnityEngine;
 //code borrowed from Stephen Barr from "Make a Simple Card Game in Unity | Book Club Tutorials" https://www.youtube.com/watch?v=E1nO1PbQFXw//
 public class MainCard : MonoBehaviour
 {
-[SerializeField] private SceneController controller;
-[SerializeField] private GameObject cardBack;
+public SceneController controller;
+public GameObject cardBack;
 
 public void OnMouseDown()
     {
