@@ -22,7 +22,7 @@ public class GameControl : MonoBehaviour
     {
         Gameover.Play("GameoverOff");
         int startTotal = frontIndex.Count;
-        float xPos = -3f;
+        float xPos = -1.65f;
         float yPos = 2f;
         for (int i = 0; i < (startTotal - 1); i++)
         {
@@ -30,10 +30,10 @@ public class GameControl : MonoBehaviour
             var temp = Instantiate(card, new Vector3(xPos, yPos, 0), Quaternion.identity);
             temp.GetComponent<CardFlip>().frontIndex = frontIndex[shuffleNum];
             frontIndex.Remove(frontIndex[shuffleNum]);
-            xPos = xPos + 3;
+            xPos = xPos + 1.5f;
             if (i == (startTotal / 2 - 2))
             {
-                xPos = -6f;
+                xPos = -3.15f;
                 yPos = -2f;
             }
         }
@@ -73,12 +73,20 @@ public class GameControl : MonoBehaviour
     public bool CheckMatch()
     {
         bool match = false;
-        //Gameover.Play("GameoverOff");
 
-        if (Input.GetMouseButtonDown(0))
+        //if (Input.GetMouseButtonDown(0))
+        
+        if (Input.GetTouch(0).phase == TouchPhase.Began)
+        {
             clicks++;
-        scoreLabel.text = " " + (10 - clicks);
-        scoreLabelHigh.text = " " + (10 - clicksHigh);
+            scoreLabel.text = " " + (10 - clicks);
+            scoreLabelHigh.text = " " + (10 - clicksHigh);
+        }
+
+        else if (clicks == 0)
+        {
+            Gameover.Play("GameoverOn");
+        }
 
         if (visibleFront[0] == visibleFront[1])
         {
@@ -86,7 +94,6 @@ public class GameControl : MonoBehaviour
             visibleFront[1] = -2;
             match = true;
             MatchSound.Play();
-
         }
         return match;
     }
