@@ -2019,7 +2019,7 @@ GameObject:
   - component: {fileID: 2071971678}
   - component: {fileID: 2071971676}
   - component: {fileID: 2071971681}
-  - component: {fileID: 2071971682}
+  - component: {fileID: 2071971683}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -2221,15 +2221,13 @@ MonoBehaviour:
   - {fileID: 7482667652216324306, guid: b8263d8b385a21d4c9622012e458c2fd, type: 3}
   - {fileID: 7482667652216324306, guid: 2c10b83d7b3231e4089bbd18eb360cf1, type: 3}
   - {fileID: 7482667652216324306, guid: 71e899ad943692048837687cfe6af4e4, type: 3}
-  - {fileID: 7482667652216324306, guid: 75fe1fe9254ddac46993c495ae24764f, type: 3}
-  - {fileID: 7482667652216324306, guid: b11dbc71c6902a441bcf451a004c4fd5, type: 3}
-  - {fileID: 7482667652216324306, guid: b8263d8b385a21d4c9622012e458c2fd, type: 3}
-  - {fileID: 7482667652216324306, guid: 71e899ad943692048837687cfe6af4e4, type: 3}
+  - {fileID: 7482667652216324306, guid: 76f2169058e2a2748b8558a8836ba2a0, type: 3}
+  - {fileID: 7482667652216324306, guid: c45c2023ae9acab4eb8b194c1a4f215f, type: 3}
   back: {fileID: 7482667652216324306, guid: 13c38aee78a254b4ab058d0a4423c150, type: 3}
   frontIndex: 0
   matched: 0
   NoMatchSound: {fileID: 2071971676}
---- !u!114 &2071971682
+--- !u!114 &2071971683
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2238,10 +2236,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2071971675}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 59bb09161f734ec4cbd317a631737aa0, type: 3}
+  m_Script: {fileID: 11500000, guid: f96b9b5a98e23084787f1f35d270673d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idObj: {fileID: 0}
-  startEvent:
-    m_PersistentCalls:
-      m_Calls: []
+  SpriteDataListObj: {fileID: 11400000, guid: 38522b4f03d41034fb70cb869850ddec, type: 2}

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-//Code borrowed from https://github.com/kurtkaiser/MemoryVideoTutorial/blob/master/Scriptes/MainToken.cs//
+//Code borrowed and modified from https://github.com/kurtkaiser/MemoryVideoTutorial/blob/master/Scriptes/MainToken.cs//
 public class CardFlip : MonoBehaviour
 {
     GameObject gamecontrol;

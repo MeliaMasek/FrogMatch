@@ -4,19 +4,21 @@ using UnityEngine;
 public class SpriteBehavior : MonoBehaviour
 
 {
-    private SpriteRenderer rendererObj; 
+    private SpriteRenderer rendererObj;
+    public SpriteDataList SpriteDataListObj;
+
     private void Awake()
     {
         rendererObj = GetComponent<SpriteRenderer>();
     }
 
-    public void ChangeRenderColor(ColorId obj)
+    public void ChangeRenderSprite(Sprite obj)
     {
-        rendererObj.color = obj.value;
+        rendererObj.sprite = obj;
     }
 
-    public void ChangeRenderColor(ColorIdDataList obj)
+    public void ChangeRenderSprite(SpriteDataList obj)
     {
-        rendererObj.color = obj.currentColor.value;
+        rendererObj.sprite = obj.currentSprite;
     }
 }
