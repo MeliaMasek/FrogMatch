@@ -2,11 +2,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-//Code borrowed from https://github.com/kurtkaiser/MemoryVideoTutorial/blob/master/Scriptes/GameControl.cs//
+//Code borrowed from and modified https://github.com/kurtkaiser/MemoryVideoTutorial/blob/master/Scriptes/GameControl.cs//
 public class GameControlHard : MonoBehaviour
 {
     GameObject card;
-    List<int> frontIndex = new() { 0, 1, 2, 3, 4, 5, 6, 0, 1, 2, 3, 4, 5, 6 };
+    List<int> frontIndex = new() { 0, 0, 1, 1, 2, 3, 4, 5, 6, 7, 7, 8, 0, 0, 1, 1, 2, 3, 4, 5, 6, 7, 7, 8};
     public static System.Random rnd = new();
     public int shuffleNum = 0;
     int[] visibleFront = { -1, -2 };
@@ -22,24 +22,31 @@ public class GameControlHard : MonoBehaviour
     {
         Gameover.Play("GameoverOff");
         int startTotal = frontIndex.Count;
-        float xPos = -1.65f;
-        float yPos = 1.3f;
+        float xPos = -1.85f;
+        float yPos = 2.31f;
         for (int i = 0; i < (startTotal - 1); i++)
         {
             shuffleNum = rnd.Next(0, (frontIndex.Count));
             var temp = Instantiate(card, new Vector3(xPos, yPos, 0), Quaternion.identity);
-            temp.GetComponent<CardFlip>().frontIndex = frontIndex[shuffleNum];
+            temp.GetComponent<CardFlipHard>().frontIndex = frontIndex[shuffleNum];
             frontIndex.Remove(frontIndex[shuffleNum]);
-            xPos = xPos + 1.5f;
-            if (i == (startTotal / 2 - 2))
+            xPos = xPos + 1.25f;
+            /*if (i == (startTotal / 2 - 2))
             {
-                xPos = -3.15f;
-                yPos = -1.3f;
+                xPosone = -3.10f;
+                yPosone = -.75f;
+            }
+            */
+            
+            if(i == 4 || i == 10 || i == 16)
+            {
+                xPos = -3.10f;
+                yPos = yPos - 1.5f;
             }
         }
-        card.GetComponent<CardFlip>().frontIndex = frontIndex[0];
+        card.GetComponent<CardFlipHard>().frontIndex = frontIndex[0];
     }
-
+   
     public bool TwoCards()
     {
         bool cardsup = visibleFront[0] >= 0 && visibleFront[1] >= 0;
