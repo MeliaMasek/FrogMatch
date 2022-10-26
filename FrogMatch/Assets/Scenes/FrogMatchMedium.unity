@@ -1629,7 +1629,7 @@ MonoBehaviour:
           m_StringArgument: GameoverOff
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 2071971677}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CardFlip, Assembly-CSharp
         m_MethodName: Reset
         m_Mode: 1
@@ -2017,8 +2017,9 @@ GameObject:
   - component: {fileID: 2071971680}
   - component: {fileID: 2071971679}
   - component: {fileID: 2071971678}
-  - component: {fileID: 2071971677}
   - component: {fileID: 2071971676}
+  - component: {fileID: 2071971681}
+  - component: {fileID: 2071971682}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -2122,28 +2123,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &2071971677
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2071971675}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c92ace3d00b73034da904b07dc95744b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fronts:
-  - {fileID: 7482667652216324306, guid: 75fe1fe9254ddac46993c495ae24764f, type: 3}
-  - {fileID: 7482667652216324306, guid: b11dbc71c6902a441bcf451a004c4fd5, type: 3}
-  - {fileID: 7482667652216324306, guid: b8263d8b385a21d4c9622012e458c2fd, type: 3}
-  - {fileID: 7482667652216324306, guid: 2c10b83d7b3231e4089bbd18eb360cf1, type: 3}
-  - {fileID: 7482667652216324306, guid: 71e899ad943692048837687cfe6af4e4, type: 3}
-  back: {fileID: 7482667652216324306, guid: 13c38aee78a254b4ab058d0a4423c150, type: 3}
-  frontIndex: 0
-  matched: 0
-  NoMatchSound: {fileID: 2071971676}
 --- !u!65 &2071971678
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2217,10 +2196,52 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2071971675}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.15, y: 1.28, z: 0}
-  m_LocalScale: {x: 0.9747, y: 1.46205, z: 0.48735}
+  m_LocalPosition: {x: -3.1, y: 1, z: 0}
+  m_LocalScale: {x: 0.75070417, y: 1.1260563, z: 0.37535208}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2071971681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2071971675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ca2f0b37c548ff4ba00851db0d9dd05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fronts:
+  - {fileID: 7482667652216324306, guid: 75fe1fe9254ddac46993c495ae24764f, type: 3}
+  - {fileID: 7482667652216324306, guid: b11dbc71c6902a441bcf451a004c4fd5, type: 3}
+  - {fileID: 7482667652216324306, guid: b8263d8b385a21d4c9622012e458c2fd, type: 3}
+  - {fileID: 7482667652216324306, guid: 2c10b83d7b3231e4089bbd18eb360cf1, type: 3}
+  - {fileID: 7482667652216324306, guid: 71e899ad943692048837687cfe6af4e4, type: 3}
+  - {fileID: 7482667652216324306, guid: 75fe1fe9254ddac46993c495ae24764f, type: 3}
+  - {fileID: 7482667652216324306, guid: b11dbc71c6902a441bcf451a004c4fd5, type: 3}
+  - {fileID: 7482667652216324306, guid: b8263d8b385a21d4c9622012e458c2fd, type: 3}
+  - {fileID: 7482667652216324306, guid: 71e899ad943692048837687cfe6af4e4, type: 3}
+  back: {fileID: 7482667652216324306, guid: 13c38aee78a254b4ab058d0a4423c150, type: 3}
+  frontIndex: 0
+  matched: 0
+  NoMatchSound: {fileID: 2071971676}
+--- !u!114 &2071971682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2071971675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59bb09161f734ec4cbd317a631737aa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idObj: {fileID: 0}
+  startEvent:
+    m_PersistentCalls:
+      m_Calls: []

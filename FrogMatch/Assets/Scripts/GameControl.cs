@@ -22,7 +22,7 @@ public class GameControl : MonoBehaviour
     {
         Gameover.Play("GameoverOff");
         int startTotal = frontIndex.Count;
-        float xPos = -1.65f;
+        float xPos = -1.5f;
         float yPos = 1.3f;
         for (int i = 0; i < (startTotal - 1); i++)
         {
@@ -33,7 +33,7 @@ public class GameControl : MonoBehaviour
             xPos = xPos + 1.5f;
             if (i == (startTotal / 2 - 2))
             {
-                xPos = -3.15f;
+                xPos = -3f;
                 yPos = -1.3f;
             }
         }
