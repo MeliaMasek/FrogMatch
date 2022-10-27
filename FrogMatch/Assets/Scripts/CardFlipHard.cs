@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 //Code borrowed and modified from https://github.com/kurtkaiser/MemoryVideoTutorial/blob/master/Scriptes/MainToken.cs//
 public class CardFlipHard : MonoBehaviour
@@ -45,10 +46,6 @@ public class CardFlipHard : MonoBehaviour
 
     public void Reset()
     {
-        if (card.sprite == fronts[frontIndex])
-        {
-            card.sprite = back;
-            //GetComponent<GameControl>();
-        }
+        SceneManager.GetActiveScene(); SceneManager.LoadScene(4);
     }
 }

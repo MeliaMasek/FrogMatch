@@ -5,7 +5,7 @@ using UnityEngine.UI;
 //Code borrowed and modified from https://github.com/kurtkaiser/MemoryVideoTutorial/blob/master/Scriptes/GameControl.cs//
 public class GameControl : MonoBehaviour
 {
-    GameObject card;
+    public GameObject card;
     List<int> frontIndex = new() { 0, 1, 2, 3, 4, 0, 1, 2, 3, 4 };
     public static System.Random rnd = new();
     public int shuffleNum = 0;
@@ -31,6 +31,7 @@ public class GameControl : MonoBehaviour
             temp.GetComponent<CardFlip>().frontIndex = frontIndex[shuffleNum];
             frontIndex.Remove(frontIndex[shuffleNum]);
             xPos = xPos + 1.5f;
+            
             if (i == (startTotal / 2 - 2))
             {
                 xPos = -3f;
@@ -39,7 +40,7 @@ public class GameControl : MonoBehaviour
         }
         card.GetComponent<CardFlip>().frontIndex = frontIndex[0];
     }
-
+    
     public bool TwoCards()
     {
         bool cardsup = visibleFront[0] >= 0 && visibleFront[1] >= 0;
@@ -75,12 +76,11 @@ public class GameControl : MonoBehaviour
         bool match = false;
 
         //if (Input.GetMouseButtonDown(0))
-        
         if (Input.GetTouch(0).phase == TouchPhase.Began)
         {
             clicks++;
-            scoreLabel.text = " " + (10 - clicks);
-            scoreLabelHigh.text = " " + (10 - clicksHigh);
+            scoreLabel.text = " " + (20 - clicks);
+            scoreLabelHigh.text = " " + (clicksHigh);
         }
 
         else if (clicks == 0)
@@ -103,4 +103,3 @@ public class GameControl : MonoBehaviour
         card = GameObject.Find("Card");
     }
 }
-

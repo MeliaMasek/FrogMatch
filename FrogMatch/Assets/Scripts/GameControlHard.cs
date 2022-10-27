@@ -31,13 +31,7 @@ public class GameControlHard : MonoBehaviour
             temp.GetComponent<CardFlipHard>().frontIndex = frontIndex[shuffleNum];
             frontIndex.Remove(frontIndex[shuffleNum]);
             xPos = xPos + 1.25f;
-            /*if (i == (startTotal / 2 - 2))
-            {
-                xPosone = -3.10f;
-                yPosone = -.75f;
-            }
-            */
-            
+
             if(i == 4 || i == 10 || i == 16)
             {
                 xPos = -3.10f;
@@ -82,12 +76,11 @@ public class GameControlHard : MonoBehaviour
         bool match = false;
 
         //if (Input.GetMouseButtonDown(0))
-        
         if (Input.GetTouch(0).phase == TouchPhase.Began)
         {
             clicks++;
-            scoreLabel.text = " " + (10 - clicks);
-            scoreLabelHigh.text = " " + (10 - clicksHigh);
+            scoreLabel.text = " " + (40 - clicks);
+            scoreLabelHigh.text = " " + (clicksHigh);
         }
 
         else if (clicks == 0)
@@ -110,4 +103,3 @@ public class GameControlHard : MonoBehaviour
         card = GameObject.Find("Card");
     }
 }
-
