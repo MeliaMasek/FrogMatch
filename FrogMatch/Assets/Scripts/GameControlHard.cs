@@ -35,7 +35,7 @@ public class GameControlHard : MonoBehaviour
             if(i == 4 || i == 10 || i == 16)
             {
                 xPos = -3.10f;
-                yPos = yPos - 1.5f;
+                yPos = yPos - 1.7f;
             }
         }
         card.GetComponent<CardFlipHard>().frontIndex = frontIndex[0];

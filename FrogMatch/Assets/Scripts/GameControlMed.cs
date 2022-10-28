@@ -22,7 +22,7 @@ public class GameControlMed : MonoBehaviour
     {
         Gameover.Play("GameoverOff");
         int startTotal = frontIndex.Count;
-        float xPos = -1.77f;
+        float xPos = -1.87f;
         float yPos = 1f;
         for (int i = 0; i < (startTotal - 1); i++)
         {
@@ -34,7 +34,7 @@ public class GameControlMed : MonoBehaviour
 
             if(i == 4 || i == 10)
             {
-                xPos = -3.10f;
+                xPos = -3.12f;
                 yPos = yPos - 1.75f;
             }
         }
