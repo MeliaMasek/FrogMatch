@@ -11,16 +11,21 @@ public class GameControlMed : MonoBehaviour
     public int shuffleNum = 0;
     int[] visibleFront = { -1, -2 };
     public AudioSource MatchSound;
+    public AudioSource GameOverSound;
     private int clicks;
     private int clicksHigh;
+    private int pairs;
+    public Text pairsLabel;
     public Text scoreLabel;
     public Text scoreLabelHigh;
     public Sprite back;
     public Animator Gameover;
+    public Animator GameWon;
 
     public void Start()
     {
         Gameover.Play("GameoverOff");
+        GameWon.Play("GameWonOff");
         int startTotal = frontIndex.Count;
         float xPos = -1.87f;
         float yPos = 1f;
@@ -75,17 +80,17 @@ public class GameControlMed : MonoBehaviour
     {
         bool match = false;
 
-        //if (Input.GetMouseButtonDown(0))
-        if (Input.GetTouch(0).phase == TouchPhase.Began)
+        if (Input.GetMouseButtonDown(0))
+        //if (Input.GetTouch(0).phase == TouchPhase.Began)
         {
             clicks++;
             scoreLabel.text = " " + (35 - clicks);
             scoreLabelHigh.text = " " + (clicksHigh);
         }
 
-        else if (clicks == 0)
+        if (scoreLabel.text == " " + (0))
         {
-            Gameover.Play("GameoverOn");
+            GameOver();
         }
 
         if (visibleFront[0] == visibleFront[1])
@@ -93,7 +98,14 @@ public class GameControlMed : MonoBehaviour
             visibleFront[0] = -1;
             visibleFront[1] = -2;
             match = true;
+            pairs++;
+            pairsLabel.text = " " + (pairs);
             MatchSound.Play();
+        }
+        
+        if (pairsLabel.text == " " + (9))
+        {
+            Gamewon();
         }
         return match;
     }
@@ -101,5 +113,17 @@ public class GameControlMed : MonoBehaviour
     private void Awake()
     {
         card = GameObject.Find("Card");
+    }
+    
+    private void GameOver()
+    {
+        Gameover.Play("GameoverOn");
+        GameOverSound.Play();
+    }
+    
+    private void Gamewon()
+    {
+        GameWon.Play("GameWonOn");
+        //GameOverSound.Play();
     }
 }
