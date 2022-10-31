@@ -25,6 +25,19 @@ public class IntData : ScriptableObject
         }
     }
     
+    /* test for highscore
+    public void CompareValueLow(IntData obj)
+    {
+        if (value <= obj.value)
+        {
+            
+        }
+        else
+        {
+            value = obj.value;
+        }
+    }
+    */
     public void SetValue(IntData obj)
     {
         value = obj.value;

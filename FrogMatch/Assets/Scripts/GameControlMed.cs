@@ -103,7 +103,7 @@ public class GameControlMed : MonoBehaviour
             MatchSound.Play();
         }
         
-        if (pairsLabel.text == " " + (9))
+        if (pairsLabel.text == " " + (9) || pairsLabel.text == " " + (9) && scoreLabel.text == " " + (0))
         {
             Gamewon();
         }

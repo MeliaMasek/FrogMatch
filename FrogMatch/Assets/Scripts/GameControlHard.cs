@@ -103,7 +103,7 @@ public class GameControlHard : MonoBehaviour
             MatchSound.Play();
         }
         
-        if (pairsLabel.text == " " + (12))
+        if (pairsLabel.text == " " + (12) || pairsLabel.text == " " + (12) && scoreLabel.text == " " + (0))
         {
             Gamewon();
         }

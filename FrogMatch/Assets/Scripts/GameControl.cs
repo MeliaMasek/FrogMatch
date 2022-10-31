@@ -92,7 +92,7 @@ public class GameControl : MonoBehaviour
         {
             GameOver();
         }
-
+        
         if (visibleFront[0] == visibleFront[1])
         {
             visibleFront[0] = -1;
@@ -103,7 +103,7 @@ public class GameControl : MonoBehaviour
             MatchSound.Play();
         }
         
-        if (pairsLabel.text == " " + (5))
+        if (pairsLabel.text == " " + (5) || pairsLabel.text == " " + (5) && scoreLabel.text == " " + (0))
         {
             Gamewon();
         }
@@ -124,6 +124,7 @@ public class GameControl : MonoBehaviour
     private void Gamewon()
     {
         GameWon.Play("GameWonOn");
+        Gameover.Play("GameoverOff");
         //GameOverSound.Play();
     }
 }
