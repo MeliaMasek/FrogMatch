@@ -75,8 +75,8 @@ public class GameControl : MonoBehaviour
     {
         bool match = false;
 
-        //if (Input.GetMouseButtonDown(0))
-        if (Input.GetTouch(0).phase == TouchPhase.Began)
+        if (Input.GetMouseButtonDown(0))
+        //if (Input.GetTouch(0).phase == TouchPhase.Began)
         {
             clicks++;
             scoreLabel.text = " " + (20 - clicks);
