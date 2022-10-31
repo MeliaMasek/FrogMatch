@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -46,6 +47,12 @@ public class CardFlip : MonoBehaviour
 
     public void Reset()
     {
-       SceneManager.GetActiveScene(); SceneManager.LoadScene(2);
+        StartCoroutine(DelaySceneLoad());
+    }
+    
+    IEnumerator DelaySceneLoad()
+    {
+        yield return new WaitForSeconds(.15f);
+        SceneManager.LoadScene(2);
     }
 }

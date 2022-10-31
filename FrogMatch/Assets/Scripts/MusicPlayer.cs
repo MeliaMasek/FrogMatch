@@ -1,4 +1,6 @@
 using UnityEngine;
+
+//Background Music "Game Comedy Interesting Playful Sweet Bright Childish Music" by REDproductions from Pixabay
 //Code borrowed from NuffuruDevelopment on Unity Answers https://answers.unity.com/questions/1260393/make-music-continue-playing-through-scenes.html
 public class MusicPlayer : MonoBehaviour
 {
