@@ -112,13 +112,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c92ace3d00b73034da904b07dc95744b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GameControl: {fileID: 0}
+  card: {fileID: 0}
   fronts:
   - {fileID: 7482667652216324306, guid: 75fe1fe9254ddac46993c495ae24764f, type: 3}
   - {fileID: 7482667652216324306, guid: b11dbc71c6902a441bcf451a004c4fd5, type: 3}
   - {fileID: 7482667652216324306, guid: b8263d8b385a21d4c9622012e458c2fd, type: 3}
   - {fileID: 7482667652216324306, guid: 2c10b83d7b3231e4089bbd18eb360cf1, type: 3}
   - {fileID: 7482667652216324306, guid: 71e899ad943692048837687cfe6af4e4, type: 3}
-  back: {fileID: 7482667652216324306, guid: 13c38aee78a254b4ab058d0a4423c150, type: 3}
+  back: {fileID: 21300000, guid: 1c53c2cdfc2459f4097d86b7c7091b83, type: 3}
   frontIndex: 0
   matched: 0
   NoMatchSound: {fileID: 6941399733482009824}

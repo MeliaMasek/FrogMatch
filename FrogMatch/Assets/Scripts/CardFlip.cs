@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class CardFlip : MonoBehaviour
 {
     GameObject gamecontrol;
+    public GameControl GameControl;
     public SpriteRenderer card;
     public Sprite[] fronts;
     public Sprite back;
@@ -25,7 +26,8 @@ public class CardFlip : MonoBehaviour
                     gamecontrol.GetComponent<GameControl>().AddVisibleFace(frontIndex);
                     matched = gamecontrol.GetComponent<GameControl>().CheckMatch();
 
-                    if (gamecontrol.GetComponent<GameControl>().TwoCards() == true && matched == false)
+                    //gamecontrol.GetComponent<GameControl>().TwoCards() == true && matched == false    
+                    if (GameControl.TwoCards() == true && matched == false)
                     {
                         NoMatchSound.Play();
                     }

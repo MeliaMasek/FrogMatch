@@ -88,11 +88,6 @@ public class GameControlMed : MonoBehaviour
             scoreLabelHigh.text = " " + (clicksHigh);
         }
 
-        if (scoreLabel.text == " " + (0))
-        {
-            GameOver();
-        }
-
         if (visibleFront[0] == visibleFront[1])
         {
             visibleFront[0] = -1;
@@ -103,7 +98,12 @@ public class GameControlMed : MonoBehaviour
             MatchSound.Play();
         }
         
-        if (pairsLabel.text == " " + (9) || pairsLabel.text == " " + (9) && scoreLabel.text == " " + (0))
+        if (scoreLabel.text == " " + (0) && pairsLabel.text != " " + (9))
+        {
+            GameOver();
+        }
+        
+        if (pairsLabel.text == " " + (9))
         {
             Gamewon();
         }

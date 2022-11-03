@@ -2587,6 +2587,18 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5288865427783149703, guid: e0ab6a14f5fddde4584159b760ad158c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.897996
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288865427783149703, guid: e0ab6a14f5fddde4584159b760ad158c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.346994
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288865427783149703, guid: e0ab6a14f5fddde4584159b760ad158c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.448998
+      objectReference: {fileID: 0}
+    - target: {fileID: 5288865427783149703, guid: e0ab6a14f5fddde4584159b760ad158c, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3.1
       objectReference: {fileID: 0}
@@ -2626,6 +2638,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5288865427783149704, guid: e0ab6a14f5fddde4584159b760ad158c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7482667652216324306, guid: 13c38aee78a254b4ab058d0a4423c150, type: 3}
     - target: {fileID: 5288865427783149707, guid: e0ab6a14f5fddde4584159b760ad158c, type: 3}
       propertyPath: m_audioClip
       value: 

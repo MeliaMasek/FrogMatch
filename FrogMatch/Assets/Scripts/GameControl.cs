@@ -78,6 +78,9 @@ public class GameControl : MonoBehaviour
 
     public bool CheckMatch()
     {
+        //maybe disable or check if matched
+        
+        
         bool match = false;
 
         if (Input.GetMouseButtonDown(0))
@@ -85,12 +88,7 @@ public class GameControl : MonoBehaviour
         {
             clicks++;
             scoreLabel.text = " " + (20 - clicks);
-            scoreLabelHigh.text = " " + (clicksHigh);
-        }
-        
-        if (scoreLabel.text == " " + (0))
-        {
-            GameOver();
+            //scoreLabelHigh.text = " " + (clicksHigh);
         }
         
         if (visibleFront[0] == visibleFront[1])
@@ -102,11 +100,16 @@ public class GameControl : MonoBehaviour
             pairsLabel.text = " " + (pairs);
             MatchSound.Play();
         }
+        if (scoreLabel.text == " " + (0) && pairsLabel.text != " " + (5))
+        {
+            GameOver();
+        }
         
-        if (pairsLabel.text == " " + (5) || pairsLabel.text == " " + (5) && scoreLabel.text == " " + (0))
+        if (pairsLabel.text == " " + (5))
         {
             Gamewon();
         }
+        
         return match;
     }
 
@@ -125,6 +128,10 @@ public class GameControl : MonoBehaviour
     {
         GameWon.Play("GameWonOn");
         Gameover.Play("GameoverOff");
-        //GameOverSound.Play();
+        if (clicks > (20 - clicks))
+        {
+            scoreLabelHigh.text = " " + (20 - clicks);
+            //scoreLabelHigh.text = " " + (clicksHigh);
+        }
     }
 }

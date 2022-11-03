@@ -1493,18 +1493,6 @@ MonoBehaviour:
   startEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 0b7241197eff01244ba89835bc99c717, type: 2}
-        m_TargetAssemblyTypeName: IntData, Assembly-CSharp
-        m_MethodName: SetValue
-        m_Mode: 3
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1287295737}
         m_TargetAssemblyTypeName: TextLabelBehavior, Assembly-CSharp
         m_MethodName: UpdateLabel
@@ -2594,12 +2582,28 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 6941399733482009824, guid: 9f2bac62c50f5e144bb1dc1b3cc08e9b, type: 3}
+      propertyPath: MinDistance
+      value: 2.398046
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941399733482009824, guid: 9f2bac62c50f5e144bb1dc1b3cc08e9b, type: 3}
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 4449d92d150deef468fbc7f7d4599ef6, type: 3}
     - target: {fileID: 6941399733482009826, guid: 9f2bac62c50f5e144bb1dc1b3cc08e9b, type: 3}
       propertyPath: m_RootOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941399733482009826, guid: 9f2bac62c50f5e144bb1dc1b3cc08e9b, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.0683774
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941399733482009826, guid: 9f2bac62c50f5e144bb1dc1b3cc08e9b, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.6025659
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941399733482009826, guid: 9f2bac62c50f5e144bb1dc1b3cc08e9b, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5341887
       objectReference: {fileID: 0}
     - target: {fileID: 6941399733482009826, guid: 9f2bac62c50f5e144bb1dc1b3cc08e9b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2642,9 +2646,49 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6941399733482009827, guid: 9f2bac62c50f5e144bb1dc1b3cc08e9b, type: 3}
+      propertyPath: back
+      value: 
+      objectReference: {fileID: 7482667652216324306, guid: 13c38aee78a254b4ab058d0a4423c150, type: 3}
+    - target: {fileID: 6941399733482009827, guid: 9f2bac62c50f5e144bb1dc1b3cc08e9b, type: 3}
       propertyPath: card
       value: 
       objectReference: {fileID: 1910891891}
+    - target: {fileID: 6941399733482009827, guid: 9f2bac62c50f5e144bb1dc1b3cc08e9b, type: 3}
+      propertyPath: GameControl
+      value: 
+      objectReference: {fileID: 479678181}
+    - target: {fileID: 6941399733482009829, guid: 9f2bac62c50f5e144bb1dc1b3cc08e9b, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941399733482009829, guid: 9f2bac62c50f5e144bb1dc1b3cc08e9b, type: 3}
+      propertyPath: m_Size.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941399733482009829, guid: 9f2bac62c50f5e144bb1dc1b3cc08e9b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7482667652216324306, guid: 13c38aee78a254b4ab058d0a4423c150, type: 3}
+    - target: {fileID: 6941399733482009829, guid: 9f2bac62c50f5e144bb1dc1b3cc08e9b, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941399733482009829, guid: 9f2bac62c50f5e144bb1dc1b3cc08e9b, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941399733482009829, guid: 9f2bac62c50f5e144bb1dc1b3cc08e9b, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941399733482009829, guid: 9f2bac62c50f5e144bb1dc1b3cc08e9b, type: 3}
+      propertyPath: m_MaskInteraction
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941399733482009829, guid: 9f2bac62c50f5e144bb1dc1b3cc08e9b, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6941399733482009850, guid: 9f2bac62c50f5e144bb1dc1b3cc08e9b, type: 3}
       propertyPath: m_Name
       value: Card
