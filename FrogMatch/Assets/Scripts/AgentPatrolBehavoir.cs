@@ -22,7 +22,6 @@ public class AgentPatrolBehavoir : MonoBehaviour
         {
             agent.destination = patrolPoints[i].position;
             i = (i + 1) % patrolPoints.Count;
-
         }
     }
 }
