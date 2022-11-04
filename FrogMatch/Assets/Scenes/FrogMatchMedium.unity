@@ -505,13 +505,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 632706369}
+  - component: {fileID: 632706373}
   - component: {fileID: 632706368}
   - component: {fileID: 632706367}
   - component: {fileID: 632706366}
-  - component: {fileID: 632706370}
   - component: {fileID: 632706371}
-  - component: {fileID: 632706373}
   - component: {fileID: 632706372}
+  - component: {fileID: 632706370}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -976,6 +976,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 732972094}
   m_CullTransparentMesh: 1
+--- !u!1 &743605762 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9000390149083426067, guid: 8e513796299a02245aad1dc0a516487a, type: 3}
+  m_PrefabInstance: {fileID: 9000390150885550664}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &835510897
 GameObject:
   m_ObjectHideFlags: 0
@@ -1215,15 +1220,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4592b3e8c84dbf249b91cb783f4d196f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shuffleNum: 0
-  MatchSound: {fileID: 835510900}
-  GameOverSound: {fileID: 835510903}
-  pairsLabel: {fileID: 543599937}
-  scoreLabel: {fileID: 711913026}
-  scoreLabelHigh: {fileID: 1287295738}
-  back: {fileID: 7482667652216324306, guid: 13c38aee78a254b4ab058d0a4423c150, type: 3}
+  card: {fileID: 743605762}
   Gameover: {fileID: 732972096}
   GameWon: {fileID: 387583633}
+  MatchSound: {fileID: 835510900}
+  GameOverSound: {fileID: 835510903}
+  shuffleNum: 0
+  scoreLabel: {fileID: 711913026}
+  scoreLabelHigh: {fileID: 11400000, guid: 5b41944c5a62af643b51447c2bbdfc59, type: 2}
+  pairsLabel: {fileID: 543599937}
 --- !u!82 &835510903
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1612,18 +1617,6 @@ MonoBehaviour:
   startEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 5b41944c5a62af643b51447c2bbdfc59, type: 2}
-        m_TargetAssemblyTypeName: IntData, Assembly-CSharp
-        m_MethodName: SetValue
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: df11486afbfd8844c90e7f9b88934c26, type: 2}
-          m_ObjectArgumentAssemblyTypeName: IntData, Assembly-CSharp
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1287295737}
         m_TargetAssemblyTypeName: TextLabelBehavior, Assembly-CSharp
         m_MethodName: UpdateLabel
@@ -2114,6 +2107,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1493216441}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 11400000, guid: df11486afbfd8844c90e7f9b88934c26, type: 2}
         m_TargetAssemblyTypeName: IntData, Assembly-CSharp
         m_MethodName: SetValue
@@ -2138,18 +2143,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1493216441}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 732972096}
         m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
         m_MethodName: SetTrigger
@@ -2160,18 +2153,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: GameoverOff
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 2071971681}
-        m_TargetAssemblyTypeName: CardFlipMed, Assembly-CSharp
-        m_MethodName: Reset
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 11400000, guid: f279018bbb9c7fb42b28b64ef92f460c, type: 2}
@@ -2192,6 +2173,30 @@ MonoBehaviour:
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: f279018bbb9c7fb42b28b64ef92f460c, type: 2}
+          m_ObjectArgumentAssemblyTypeName: IntData, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2071971681}
+        m_TargetAssemblyTypeName: CardFlipMed, Assembly-CSharp
+        m_MethodName: Reset
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1287295737}
+        m_TargetAssemblyTypeName: TextLabelBehavior, Assembly-CSharp
+        m_MethodName: UpdateLabel
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 5b41944c5a62af643b51447c2bbdfc59, type: 2}
           m_ObjectArgumentAssemblyTypeName: IntData, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -2568,12 +2573,17 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 9000390149083426089, guid: 8e513796299a02245aad1dc0a516487a, type: 3}
   m_PrefabInstance: {fileID: 9000390150885550664}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 743605762}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9ca2f0b37c548ff4ba00851db0d9dd05, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!212 &2071971683 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 9000390149083426071, guid: 8e513796299a02245aad1dc0a516487a, type: 3}
+  m_PrefabInstance: {fileID: 9000390150885550664}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &9000390150885550664
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2634,6 +2644,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 9000390149083426089, guid: 8e513796299a02245aad1dc0a516487a, type: 3}
+      propertyPath: card
+      value: 
+      objectReference: {fileID: 2071971683}
+    m_RemovedComponents:
+    - {fileID: 9000390149083426091, guid: 8e513796299a02245aad1dc0a516487a, type: 3}
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e513796299a02245aad1dc0a516487a, type: 3}

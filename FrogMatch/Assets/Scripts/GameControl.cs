@@ -6,22 +6,23 @@ using UnityEngine.UI;
 public class GameControl : MonoBehaviour
 {
     public GameObject card;
+    public Animator Gameover;
+    public Animator GameWon;
+    public AudioSource MatchSound;
+    public AudioSource GameOverSound;
+
     List<int> frontIndex = new() { 0, 1, 2, 3, 4, 0, 1, 2, 3, 4 };
     public static System.Random rnd = new();
     public int shuffleNum = 0;
     int[] visibleFront = { -1, -2 };
-    public AudioSource MatchSound;
-    public AudioSource GameOverSound;
+
     private int clicks;
+    public Text scoreLabel;
     private IntData clicksHigh;
+    public IntData scoreLabelHigh;
     private int pairs;
     public Text pairsLabel;
-    public Text scoreLabel;
-    public IntData scoreLabelHigh;
-    public Sprite back;
-    public Animator Gameover;
-    public Animator GameWon;
-    public GameObject CanvasHighscore;
+
     public void Start()
     {
         Gameover.Play("GameoverOff");
@@ -80,14 +81,12 @@ public class GameControl : MonoBehaviour
     public bool CheckMatch()
     {
         bool match = false;
-        //GetComponent<CardFlip>().FlipBackOver();
 
         if (Input.GetMouseButtonDown(0))
         //if (Input.GetTouch(0).phase == TouchPhase.Began)
         {
             clicks++;
             scoreLabel.text = " " + (20 - clicks);
-            //scoreLabelHigh.text = " " + (clicksHigh);
         }
         
         if (visibleFront[0] == visibleFront[1])
@@ -122,7 +121,7 @@ public class GameControl : MonoBehaviour
        GameOverSound.Play();
     }
 
-    public void Gamewon()
+    private void Gamewon()
     {
         GameWon.Play("GameWonOn");
         Gameover.Play("GameoverOff");

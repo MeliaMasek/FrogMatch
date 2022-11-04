@@ -6,12 +6,14 @@ using UnityEngine.SceneManagement;
 public class CardFlip : MonoBehaviour
 {
     GameObject gamecontrol;
+    
     public SpriteRenderer card;
     public Sprite[] fronts;
     public Sprite back;
-    public int frontIndex;
-    public bool matched = false;
     public AudioSource NoMatchSound;
+    public int frontIndex;
+
+    private bool matched = false;
 
     public void OnMouseDown()
     {
@@ -37,11 +39,6 @@ public class CardFlip : MonoBehaviour
                 gamecontrol.GetComponent<GameControl>().RemoveVisibleFace(frontIndex);
             }
         }
-    }
-    
-    public void FlipBackOver()
-    {
-        //card.sprite = back;
     }
     
     private void Awake()

@@ -6,12 +6,14 @@ using UnityEngine.SceneManagement;
 public class CardFlipHard : MonoBehaviour
 {
     GameObject gamecontrol;
-    SpriteRenderer card;
+    
+    public SpriteRenderer card;
     public Sprite[] fronts;
     public Sprite back;
-    public int frontIndex;
-    public bool matched = false;
     public AudioSource NoMatchSound;
+    public int frontIndex;
+   
+    private bool matched = false;
 
     public void OnMouseDown()
     {
@@ -47,6 +49,7 @@ public class CardFlipHard : MonoBehaviour
 
     public void Reset()
     {
+        gamecontrol.GetComponent<GameControlHard>().Awake();
         StartCoroutine(DelaySceneLoad());
     }
     

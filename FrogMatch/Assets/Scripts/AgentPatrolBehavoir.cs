@@ -6,9 +6,9 @@ using UnityEngine.AI;
 public class AgentPatrolBehavoir : MonoBehaviour
 {
     private NavMeshAgent agent;
+    private int i;
     public float remainDist = .5f;
     public List<Transform> patrolPoints;
-    private int i;
     
     private void Start()
     {

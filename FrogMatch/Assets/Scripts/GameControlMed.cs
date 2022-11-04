@@ -5,22 +5,23 @@ using UnityEngine.UI;
 //Code borrowed from and modified https://github.com/kurtkaiser/MemoryVideoTutorial/blob/master/Scriptes/GameControl.cs//
 public class GameControlMed : MonoBehaviour
 {
-    GameObject card;
+    public GameObject card;
+    public Animator Gameover;
+    public Animator GameWon;
+    public AudioSource MatchSound;
+    public AudioSource GameOverSound;
+
     List<int> frontIndex = new() { 0, 0, 1, 1, 2, 3, 4, 5, 6, 0, 0, 1, 1, 2, 3, 4, 5, 6};
     public static System.Random rnd = new();
     public int shuffleNum = 0;
     int[] visibleFront = { -1, -2 };
-    public AudioSource MatchSound;
-    public AudioSource GameOverSound;
+
     private int clicks;
-    private int clicksHigh;
+    public Text scoreLabel;
+    private IntData clicksHigh;
+    public IntData scoreLabelHigh;
     private int pairs;
     public Text pairsLabel;
-    public Text scoreLabel;
-    public Text scoreLabelHigh;
-    public Sprite back;
-    public Animator Gameover;
-    public Animator GameWon;
 
     public void Start()
     {
@@ -34,6 +35,7 @@ public class GameControlMed : MonoBehaviour
             shuffleNum = rnd.Next(0, (frontIndex.Count));
             var temp = Instantiate(card, new Vector3(xPos, yPos, 0), Quaternion.identity);
             temp.GetComponent<CardFlipMed>().frontIndex = frontIndex[shuffleNum];
+            temp.GetComponent<CardFlipMed>().name = "card" + i;
             frontIndex.Remove(frontIndex[shuffleNum]);
             xPos = xPos + 1.25f;
 
@@ -85,7 +87,6 @@ public class GameControlMed : MonoBehaviour
         {
             clicks++;
             scoreLabel.text = " " + (35 - clicks);
-            scoreLabelHigh.text = " " + (clicksHigh);
         }
 
         if (visibleFront[0] == visibleFront[1])
@@ -110,7 +111,7 @@ public class GameControlMed : MonoBehaviour
         return match;
     }
 
-    private void Awake()
+    public void Awake()
     {
         card = GameObject.Find("Card");
     }
@@ -124,6 +125,13 @@ public class GameControlMed : MonoBehaviour
     private void Gamewon()
     {
         GameWon.Play("GameWonOn");
-        //GameOverSound.Play();
+        Gameover.Play("GameoverOff");
+        if (clicks > (35 - clicks))
+        {
+            if (scoreLabelHigh.value < (35 - clicks))
+            {
+                scoreLabelHigh.value = (35 - clicks);
+            }
+        }
     }
 }
