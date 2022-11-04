@@ -13,15 +13,15 @@ public class GameControl : MonoBehaviour
     public AudioSource MatchSound;
     public AudioSource GameOverSound;
     private int clicks;
-    private int clicksHigh;
+    private IntData clicksHigh;
     private int pairs;
     public Text pairsLabel;
     public Text scoreLabel;
-    public Text scoreLabelHigh;
+    public IntData scoreLabelHigh;
     public Sprite back;
     public Animator Gameover;
     public Animator GameWon;
-    
+    public GameObject CanvasHighscore;
     public void Start()
     {
         Gameover.Play("GameoverOff");
@@ -34,6 +34,7 @@ public class GameControl : MonoBehaviour
             shuffleNum = rnd.Next(0, (frontIndex.Count));
             var temp = Instantiate(card, new Vector3(xPos, yPos, 0), Quaternion.identity);
             temp.GetComponent<CardFlip>().frontIndex = frontIndex[shuffleNum];
+            temp.GetComponent<CardFlip>().name = "card" + i;
             frontIndex.Remove(frontIndex[shuffleNum]);
             xPos = xPos + 1.5f;
             
@@ -78,10 +79,8 @@ public class GameControl : MonoBehaviour
 
     public bool CheckMatch()
     {
-        //maybe disable or check if matched
-        
-        
         bool match = false;
+        //GetComponent<CardFlip>().FlipBackOver();
 
         if (Input.GetMouseButtonDown(0))
         //if (Input.GetTouch(0).phase == TouchPhase.Began)
@@ -109,11 +108,10 @@ public class GameControl : MonoBehaviour
         {
             Gamewon();
         }
-        
         return match;
     }
 
-    private void Awake()
+    public void Awake()
     {
         card = GameObject.Find("Card");
     }
@@ -124,14 +122,16 @@ public class GameControl : MonoBehaviour
        GameOverSound.Play();
     }
 
-    private void Gamewon()
+    public void Gamewon()
     {
         GameWon.Play("GameWonOn");
         Gameover.Play("GameoverOff");
         if (clicks > (20 - clicks))
         {
-            scoreLabelHigh.text = " " + (20 - clicks);
-            //scoreLabelHigh.text = " " + (clicksHigh);
+            if (scoreLabelHigh.value < (20 - clicks))
+            {
+                scoreLabelHigh.value = (20 - clicks);
+            }
         }
     }
 }

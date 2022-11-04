@@ -160,7 +160,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 475, y: 1215}
+  m_AnchoredPosition: {x: 475, y: 1381}
   m_SizeDelta: {x: 36.5951, y: 37.4847}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &45020615
@@ -212,7 +212,7 @@ MonoBehaviour:
         m_MethodName: set_sprite
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7482667652216324306, guid: 76f2169058e2a2748b8558a8836ba2a0, type: 3}
+          m_ObjectArgument: {fileID: 21300000, guid: 8a3bbd3a9771ec24db1efc15da32d32a, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -817,7 +817,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 943, y: 1524}
+  m_AnchoredPosition: {x: 943, y: 1690}
   m_SizeDelta: {x: 36.5951, y: 37.4847}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &892895195
@@ -869,7 +869,7 @@ MonoBehaviour:
         m_MethodName: set_sprite
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7482667652216324306, guid: b8263d8b385a21d4c9622012e458c2fd, type: 3}
+          m_ObjectArgument: {fileID: 21300000, guid: 8a3bbd3a9771ec24db1efc15da32d32a, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -972,7 +972,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3dbfcc27b2cc86d40bf31b65b1f06c0a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -991,8 +991,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 974213376}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0177, y: -1.5847, z: 0}
-  m_LocalScale: {x: 6.8947535, y: 3.6094787, z: 0.41664}
+  m_LocalPosition: {x: -0.0177, y: -1.41, z: 0}
+  m_LocalScale: {x: 0.6173601, y: 0.5009518, z: 0.037306182}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1275,7 +1275,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 770, y: 1215}
+  m_AnchoredPosition: {x: 770, y: 1381}
   m_SizeDelta: {x: 36.5951, y: 37.4847}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1223800549
@@ -1327,7 +1327,7 @@ MonoBehaviour:
         m_MethodName: set_sprite
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7482667652216324306, guid: c45c2023ae9acab4eb8b194c1a4f215f, type: 3}
+          m_ObjectArgument: {fileID: 21300000, guid: 8a3bbd3a9771ec24db1efc15da32d32a, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -1476,7 +1476,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1065, y: 1215}
+  m_AnchoredPosition: {x: 1065, y: 1381}
   m_SizeDelta: {x: 36.5951, y: 37.4847}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1281509546
@@ -1528,7 +1528,7 @@ MonoBehaviour:
         m_MethodName: set_sprite
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7482667652216324306, guid: 704f600ce7258d84cbb2dc2b0db56a56, type: 3}
+          m_ObjectArgument: {fileID: 21300000, guid: 8a3bbd3a9771ec24db1efc15da32d32a, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -1806,7 +1806,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 303, y: 1524}
+  m_AnchoredPosition: {x: 303, y: 1690}
   m_SizeDelta: {x: 36.5951, y: 37.4847}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1841489958
@@ -1858,7 +1858,7 @@ MonoBehaviour:
         m_MethodName: set_sprite
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7482667652216324306, guid: 75fe1fe9254ddac46993c495ae24764f, type: 3}
+          m_ObjectArgument: {fileID: 21300000, guid: 8a3bbd3a9771ec24db1efc15da32d32a, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -1940,7 +1940,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 623, y: 1524}
+  m_AnchoredPosition: {x: 623, y: 1690}
   m_SizeDelta: {x: 36.5951, y: 37.4847}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1860470450
@@ -1992,7 +1992,7 @@ MonoBehaviour:
         m_MethodName: set_sprite
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7482667652216324306, guid: b11dbc71c6902a441bcf451a004c4fd5, type: 3}
+          m_ObjectArgument: {fileID: 21300000, guid: 8a3bbd3a9771ec24db1efc15da32d32a, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -2074,7 +2074,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1263, y: 1524}
+  m_AnchoredPosition: {x: 1263, y: 1690}
   m_SizeDelta: {x: 36.5951, y: 37.4847}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1872675290
@@ -2126,7 +2126,7 @@ MonoBehaviour:
         m_MethodName: set_sprite
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7482667652216324306, guid: 2c10b83d7b3231e4089bbd18eb360cf1, type: 3}
+          m_ObjectArgument: {fileID: 21300000, guid: 8a3bbd3a9771ec24db1efc15da32d32a, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -2429,7 +2429,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1360, y: 1215}
+  m_AnchoredPosition: {x: 1360, y: 1381}
   m_SizeDelta: {x: 36.5951, y: 37.4847}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1897371034
@@ -2481,7 +2481,7 @@ MonoBehaviour:
         m_MethodName: set_sprite
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7482667652216324306, guid: 9a72b50cdf72b8f4b9f541b4a9977ea7, type: 3}
+          m_ObjectArgument: {fileID: 21300000, guid: 8a3bbd3a9771ec24db1efc15da32d32a, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -2893,7 +2893,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 180, y: 1215}
+  m_AnchoredPosition: {x: 180, y: 1381}
   m_SizeDelta: {x: 36.5951, y: 37.4847}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2027024723
@@ -2945,7 +2945,7 @@ MonoBehaviour:
         m_MethodName: set_sprite
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7482667652216324306, guid: 71e899ad943692048837687cfe6af4e4, type: 3}
+          m_ObjectArgument: {fileID: 21300000, guid: 8a3bbd3a9771ec24db1efc15da32d32a, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Sprite, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
