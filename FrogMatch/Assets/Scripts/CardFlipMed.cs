@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 //Code borrowed and modified from https://github.com/kurtkaiser/MemoryVideoTutorial/blob/master/Scriptes/MainToken.cs//
+//Code borrowed and modified from https://github.com/kurtkaiser/Scaleable-Memory/blob/main/Assets/Scripts/MainToken.cs//
 public class CardFlipMed : MonoBehaviour
 {
     GameObject gamecontrol;
@@ -13,32 +14,27 @@ public class CardFlipMed : MonoBehaviour
     public AudioSource NoMatchSound;
     public int frontIndex;
 
-    private bool matched = false;
+    public bool matched = false;
 
     public void OnMouseDown()
     {
-        if (matched == false)
-        {
-            if (card.sprite == back)
+            if (matched == false)
             {
-                if (gamecontrol.GetComponent<GameControlMed>().TwoCards() == false)
+                GameControlMed controlScript = gamecontrol.GetComponent<GameControlMed>();
+                if (card.sprite == back)
                 {
-                    card.sprite = fronts[frontIndex];
-                    gamecontrol.GetComponent<GameControlMed>().AddVisibleFace(frontIndex);
-                    matched = gamecontrol.GetComponent<GameControlMed>().CheckMatch();
-
-                    if (gamecontrol.GetComponent<GameControlMed>().TwoCards() == true && matched == false)
+                    if (controlScript.RemoveVisibleFace(this))
                     {
-                        NoMatchSound.Play();
+                        card.sprite = fronts[frontIndex];
+                        controlScript.CheckMatch();
                     }
                 }
+                else
+                {
+                    card.sprite = back;
+                    controlScript.AddVisibleFace(this);
+                }
             }
-            else
-            {
-                card.sprite = back;
-                gamecontrol.GetComponent<GameControlMed>().RemoveVisibleFace(frontIndex);
-            }
-        }
     }
 
     private void Awake()

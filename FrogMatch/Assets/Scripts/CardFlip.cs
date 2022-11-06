@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 //Code borrowed and modified from https://github.com/kurtkaiser/MemoryVideoTutorial/blob/master/Scriptes/MainToken.cs//
+//Code borrowed and modified from https://github.com/kurtkaiser/Scaleable-Memory/blob/main/Assets/Scripts/MainToken.cs//
 public class CardFlip : MonoBehaviour
 {
     GameObject gamecontrol;
@@ -13,30 +14,25 @@ public class CardFlip : MonoBehaviour
     public AudioSource NoMatchSound;
     public int frontIndex;
 
-    private bool matched = false;
+    public bool matched = false;
 
     public void OnMouseDown()
     {
         if (matched == false)
         {
+            GameControl controlScript = gamecontrol.GetComponent<GameControl>();
             if (card.sprite == back)
             {
-                if (gamecontrol.GetComponent<GameControl>().TwoCards() == false)
+                if (controlScript.RemoveVisibleFace(this))
                 {
                     card.sprite = fronts[frontIndex];
-                    gamecontrol.GetComponent<GameControl>().AddVisibleFace(frontIndex);
-                    matched = gamecontrol.GetComponent<GameControl>().CheckMatch();
-
-                    if (gamecontrol.GetComponent<GameControl>().TwoCards() == true && matched == false)   
-                    {
-                        NoMatchSound.Play();
-                    }
+                    controlScript.CheckMatch();
                 }
             }
             else
             {
                 card.sprite = back;
-                gamecontrol.GetComponent<GameControl>().RemoveVisibleFace(frontIndex);
+                controlScript.AddVisibleFace(this);
             }
         }
     }

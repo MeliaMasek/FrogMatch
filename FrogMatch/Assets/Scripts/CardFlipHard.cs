@@ -3,6 +3,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 //Code borrowed and modified from https://github.com/kurtkaiser/MemoryVideoTutorial/blob/master/Scriptes/MainToken.cs//
+//Code borrowed and modified from https://github.com/kurtkaiser/Scaleable-Memory/blob/main/Assets/Scripts/MainToken.cs//
+
 public class CardFlipHard : MonoBehaviour
 {
     GameObject gamecontrol;

@@ -3,6 +3,8 @@ using UnityEngine;
 using UnityEngine.UI;
 
 //Code borrowed from and modified https://github.com/kurtkaiser/MemoryVideoTutorial/blob/master/Scriptes/GameControl.cs//
+//Code borrowed and modified from https://github.com/kurtkaiser/Scaleable-Memory/blob/main/Assets/Scripts/GameControl.cs//
+
 public class GameControlHard : MonoBehaviour
 {
     public GameObject card;

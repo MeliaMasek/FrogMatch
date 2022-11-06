@@ -3,22 +3,22 @@ using UnityEngine;
 using UnityEngine.UI;
 
 //Code borrowed and modified from https://github.com/kurtkaiser/MemoryVideoTutorial/blob/master/Scriptes/GameControl.cs//
-//Code borrowed and modified from https://github.com/kurtkaiser/Scaleable-Memory/blob/main/Assets/Scripts/GameControl.cs//
-public class GameControl : MonoBehaviour
+public class GameControlOld : MonoBehaviour
 {
     public GameObject card;
     public Animator Gameover;
     public Animator GameWon;
     public AudioSource MatchSound;
-    public AudioSource NoMatchSound;
     public AudioSource GameOverSound;
 
     List<int> frontIndex = new() { 0, 1, 2, 3, 4, 0, 1, 2, 3, 4 };
     public static System.Random rnd = new();
     public int shuffleNum = 0;
+    int[] visibleFront = { -1, -2 };
     
-    CardFlip cardOne = null;
-    CardFlip cardTwo = null;
+    public GameObject cardOne;
+    public GameObject cardTwo;
+    public bool cardLocked;
     
     private int clicks;
     public Text scoreLabel;
@@ -52,38 +52,40 @@ public class GameControl : MonoBehaviour
         card.GetComponent<CardFlip>().frontIndex = frontIndex[0];
     }
     
-    public void AddVisibleFace(CardFlip tempCard)
+    public bool TwoCards()
     {
-        if (cardOne == tempCard)
+        bool cardsup = visibleFront[0] >= 0 && visibleFront[1] >= 0;
+        return cardsup;
+    }
+
+    public void AddVisibleFace(int index)
+    {
+        if (visibleFront[0] == -1)
         {
-            cardOne = null;
+            visibleFront[0] = index;
         }
-        if (cardTwo == tempCard)
+        else if (visibleFront[1] == -2)
         {
-            cardTwo = null;
+            visibleFront[1] = index;
         }
     }
 
-    public bool RemoveVisibleFace(CardFlip tempCard)
+    public void RemoveVisibleFace(int index)
     {
-        bool flipCard = true;
-        if (cardOne == null)
+        if (visibleFront[0] == index)
         {
-            cardOne = tempCard;
+            visibleFront[0] = -1;
         }
-        else if(cardTwo == null)
+        else if (visibleFront[1] == index)
         {
-            cardTwo = tempCard;
+            visibleFront[1] = -2;
         }
-        else
-        {
-            flipCard = false;
-        }
-        return flipCard;
     }
 
-    public void CheckMatch()
+    public bool CheckMatch()
     {
+        bool match = false;
+
         if (Input.GetMouseButtonDown(0))
         //if (Input.GetTouch(0).phase == TouchPhase.Began)
         {
@@ -91,22 +93,15 @@ public class GameControl : MonoBehaviour
             scoreLabel.text = " " + (20 - clicks);
         }
         
-        if (cardOne != null && cardTwo != null && cardOne.frontIndex == cardTwo.frontIndex)
+        if (visibleFront[0] == visibleFront[1])
         {
-            cardOne.matched = true;
-            cardTwo.matched = true;
-            cardOne = null;
-            cardTwo = null;
+            visibleFront[0] = -1;
+            visibleFront[1] = -2;
+            match = true;
             pairs++;
             pairsLabel.text = " " + (pairs);
             MatchSound.Play();
         }
-        
-        if (cardOne != null && cardTwo != null && cardOne.frontIndex != cardTwo.frontIndex)
-        {
-            NoMatchSound.Play();
-        }
-        
         if (scoreLabel.text == " " + (0) && pairsLabel.text != " " + (5))
         {
             GameOver();
@@ -116,6 +111,7 @@ public class GameControl : MonoBehaviour
         {
             Gamewon();
         }
+        return match;
     }
 
     public void Awake()
@@ -125,8 +121,8 @@ public class GameControl : MonoBehaviour
 
     private void GameOver()
     {
-        Gameover.Play("GameoverOn");
-        GameOverSound.Play();
+       Gameover.Play("GameoverOn");
+       GameOverSound.Play();
     }
 
     private void Gamewon()
