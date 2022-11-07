@@ -12,33 +12,27 @@ public class CardFlipHard : MonoBehaviour
     public SpriteRenderer card;
     public Sprite[] fronts;
     public Sprite back;
-    public AudioSource NoMatchSound;
     public int frontIndex;
    
-    private bool matched = false;
+    public bool matched = false;
 
     public void OnMouseDown()
     {
         if (matched == false)
         {
+            GameControlHard controlScript = gamecontrol.GetComponent<GameControlHard>();
             if (card.sprite == back)
             {
-                if (gamecontrol.GetComponent<GameControlHard>().TwoCards() == false)
+                if (controlScript.RemoveVisibleFace(this))
                 {
                     card.sprite = fronts[frontIndex];
-                    gamecontrol.GetComponent<GameControlHard>().AddVisibleFace(frontIndex);
-                    matched = gamecontrol.GetComponent<GameControlHard>().CheckMatch();
-
-                    if (gamecontrol.GetComponent<GameControlHard>().TwoCards() == true && matched == false)
-                    {
-                        NoMatchSound.Play();
-                    }
+                    controlScript.CheckMatch();
                 }
             }
             else
             {
                 card.sprite = back;
-                gamecontrol.GetComponent<GameControlHard>().RemoveVisibleFace(frontIndex);
+                controlScript.AddVisibleFace(this);
             }
         }
     }

@@ -11,7 +11,6 @@ public class CardFlip : MonoBehaviour
     public SpriteRenderer card;
     public Sprite[] fronts;
     public Sprite back;
-    public AudioSource NoMatchSound;
     public int frontIndex;
 
     public bool matched = false;

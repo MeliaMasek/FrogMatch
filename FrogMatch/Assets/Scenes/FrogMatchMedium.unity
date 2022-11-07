@@ -2698,9 +2698,41 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 4449d92d150deef468fbc7f7d4599ef6, type: 3}
+    - target: {fileID: 9000390149083426070, guid: 8e513796299a02245aad1dc0a516487a, type: 3}
+      propertyPath: m_Size.x
+      value: 44.13921
+      objectReference: {fileID: 0}
+    - target: {fileID: 9000390149083426070, guid: 8e513796299a02245aad1dc0a516487a, type: 3}
+      propertyPath: m_Size.y
+      value: 56.903267
+      objectReference: {fileID: 0}
+    - target: {fileID: 9000390149083426070, guid: 8e513796299a02245aad1dc0a516487a, type: 3}
+      propertyPath: m_Center.x
+      value: 0.15083064
+      objectReference: {fileID: 0}
+    - target: {fileID: 9000390149083426070, guid: 8e513796299a02245aad1dc0a516487a, type: 3}
+      propertyPath: m_Center.y
+      value: 0.000021703238
+      objectReference: {fileID: 0}
+    - target: {fileID: 9000390149083426071, guid: 8e513796299a02245aad1dc0a516487a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 04e8aa025d1ff8747b8ae92503f8aaff, type: 3}
     - target: {fileID: 9000390149083426088, guid: 8e513796299a02245aad1dc0a516487a, type: 3}
       propertyPath: m_RootOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9000390149083426088, guid: 8e513796299a02245aad1dc0a516487a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.024825744
+      objectReference: {fileID: 0}
+    - target: {fileID: 9000390149083426088, guid: 8e513796299a02245aad1dc0a516487a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.02746348
+      objectReference: {fileID: 0}
+    - target: {fileID: 9000390149083426088, guid: 8e513796299a02245aad1dc0a516487a, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.012412872
       objectReference: {fileID: 0}
     - target: {fileID: 9000390149083426088, guid: 8e513796299a02245aad1dc0a516487a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2743,9 +2775,41 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9000390149083426089, guid: 8e513796299a02245aad1dc0a516487a, type: 3}
+      propertyPath: back
+      value: 
+      objectReference: {fileID: 21300000, guid: 04e8aa025d1ff8747b8ae92503f8aaff, type: 3}
+    - target: {fileID: 9000390149083426089, guid: 8e513796299a02245aad1dc0a516487a, type: 3}
       propertyPath: card
       value: 
       objectReference: {fileID: 2071971683}
+    - target: {fileID: 9000390149083426089, guid: 8e513796299a02245aad1dc0a516487a, type: 3}
+      propertyPath: fronts.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: b0f5d481f036a97428d064cb5dd3f3b6, type: 3}
+    - target: {fileID: 9000390149083426089, guid: 8e513796299a02245aad1dc0a516487a, type: 3}
+      propertyPath: fronts.Array.data[1]
+      value: 
+      objectReference: {fileID: 21300000, guid: ecfabf97188d7d7458cf4bc0ff58d872, type: 3}
+    - target: {fileID: 9000390149083426089, guid: 8e513796299a02245aad1dc0a516487a, type: 3}
+      propertyPath: fronts.Array.data[2]
+      value: 
+      objectReference: {fileID: 21300000, guid: 775e2f4f07515f3418aace1d31f744e4, type: 3}
+    - target: {fileID: 9000390149083426089, guid: 8e513796299a02245aad1dc0a516487a, type: 3}
+      propertyPath: fronts.Array.data[3]
+      value: 
+      objectReference: {fileID: 21300000, guid: dfd6dbe42e950c340a4106dd03c29573, type: 3}
+    - target: {fileID: 9000390149083426089, guid: 8e513796299a02245aad1dc0a516487a, type: 3}
+      propertyPath: fronts.Array.data[4]
+      value: 
+      objectReference: {fileID: 21300000, guid: 13fff0535c6710043b7a4145bbbb7851, type: 3}
+    - target: {fileID: 9000390149083426089, guid: 8e513796299a02245aad1dc0a516487a, type: 3}
+      propertyPath: fronts.Array.data[5]
+      value: 
+      objectReference: {fileID: 21300000, guid: 83ab941fd83af7e47b40394dcd0ee576, type: 3}
+    - target: {fileID: 9000390149083426089, guid: 8e513796299a02245aad1dc0a516487a, type: 3}
+      propertyPath: fronts.Array.data[6]
+      value: 
+      objectReference: {fileID: 21300000, guid: 625b4b0196572744a978da7e07bc0d20, type: 3}
     m_RemovedComponents:
     - {fileID: 9000390149083426091, guid: 8e513796299a02245aad1dc0a516487a, type: 3}
     m_AddedGameObjects: []
