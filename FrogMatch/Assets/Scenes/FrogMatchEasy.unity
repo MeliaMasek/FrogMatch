@@ -522,6 +522,7 @@ GameObject:
   - component: {fileID: 479678185}
   - component: {fileID: 479678186}
   - component: {fileID: 479678181}
+  - component: {fileID: 479678187}
   m_Layer: 0
   m_Name: GameControl
   m_TagString: Untagged
@@ -950,6 +951,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &479678187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 479678180}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c4161df5d4f82d49864213a63ad1164, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2704,15 +2717,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6941399733482009826, guid: 9f2bac62c50f5e144bb1dc1b3cc08e9b, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.024825744
+      value: 0.032067414
       objectReference: {fileID: 0}
     - target: {fileID: 6941399733482009826, guid: 9f2bac62c50f5e144bb1dc1b3cc08e9b, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.02746348
+      value: 0.03547458
       objectReference: {fileID: 0}
     - target: {fileID: 6941399733482009826, guid: 9f2bac62c50f5e144bb1dc1b3cc08e9b, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.012412872
+      value: 0.016033707
       objectReference: {fileID: 0}
     - target: {fileID: 6941399733482009826, guid: 9f2bac62c50f5e144bb1dc1b3cc08e9b, type: 3}
       propertyPath: m_LocalPosition.x

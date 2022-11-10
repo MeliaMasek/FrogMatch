@@ -34,7 +34,7 @@ public class GameControlHard : MonoBehaviour
         GameWon.Play("GameWonOff");
         int startTotal = frontIndex.Count;
         float xPos = -1.85f;
-        float yPos = 2.31f;
+        float yPos = 2.1f;
         for (int i = 0; i < (startTotal - 1); i++)
         {
             shuffleNum = rnd.Next(0, (frontIndex.Count));
@@ -83,10 +83,8 @@ public class GameControlHard : MonoBehaviour
         return flipCard;
     }
 
-    public bool CheckMatch()
+    public void CheckMatch()
     {
-        bool match = false;
-
         if (Input.GetMouseButtonDown(0))
         //if (Input.GetTouch(0).phase == TouchPhase.Began)
         {
@@ -119,7 +117,6 @@ public class GameControlHard : MonoBehaviour
         {
             Gamewon();
         }
-        return match;
     }
 
     public void Awake()
