@@ -17,23 +17,28 @@ public class CardFlipMed : MonoBehaviour
 
     public void OnMouseDown()
     {
-            if (matched == false)
+        if (gamecontrol.GetComponent<GameControlMed>().activePlay == false)
+        {
+            return;
+        }
+        
+        if (matched == false)
+        {
+            GameControlMed controlScript = gamecontrol.GetComponent<GameControlMed>();
+            if (card.sprite == back)
             {
-                GameControlMed controlScript = gamecontrol.GetComponent<GameControlMed>();
-                if (card.sprite == back)
+                if (controlScript.RemoveVisibleFace(this))
                 {
-                    if (controlScript.RemoveVisibleFace(this))
-                    {
-                        card.sprite = fronts[frontIndex];
-                        controlScript.CheckMatch();
-                    }
-                }
-                else
-                {
-                    card.sprite = back;
-                    controlScript.AddVisibleFace(this);
+                    card.sprite = fronts[frontIndex];
+                    controlScript.CheckMatch();
                 }
             }
+            else
+            {
+                card.sprite = back;
+                controlScript.AddVisibleFace(this);
+            }
+        }
     }
 
     private void Awake()

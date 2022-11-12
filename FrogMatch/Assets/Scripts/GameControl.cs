@@ -12,7 +12,8 @@ public class GameControl : MonoBehaviour
     public AudioSource MatchSound;
     public AudioSource NoMatchSound;
     public AudioSource GameOverSound;
-
+    public bool activePlay;
+    
     List<int> frontIndex = new() { 0, 1, 2, 3, 4, 0, 1, 2, 3, 4 };
     public static System.Random rnd = new();
     public int shuffleNum = 0;
@@ -26,9 +27,10 @@ public class GameControl : MonoBehaviour
     public IntData scoreLabelHigh;
     private int pairs;
     public Text pairsLabel;
-
+    
     public void Start()
     {
+        activePlay = true;
         Gameover.Play("GameoverOff");
         GameWon.Play("GameWonOff");
         int startTotal = frontIndex.Count;
@@ -39,7 +41,7 @@ public class GameControl : MonoBehaviour
             shuffleNum = rnd.Next(0, (frontIndex.Count));
             var temp = Instantiate(card, new Vector3(xPos, yPos, 0), Quaternion.identity);
             temp.GetComponent<CardFlip>().frontIndex = frontIndex[shuffleNum];
-            temp.GetComponent<CardFlip>().name = "card" + i;
+            //temp.GetComponent<CardFlip>().name = "card" + i;
             frontIndex.Remove(frontIndex[shuffleNum]);
             xPos = xPos + 1.5f;
             
@@ -86,6 +88,11 @@ public class GameControl : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         //if (Input.GetTouch(0).phase == TouchPhase.Began)
+            if (activePlay == false)
+            {
+                return;
+            }
+        
         {
             clicks++;
             scoreLabel.text = " " + (20 - clicks);
@@ -127,6 +134,7 @@ public class GameControl : MonoBehaviour
     {
         Gameover.Play("GameoverOn");
         GameOverSound.Play();
+        activePlay = false;
     }
 
     private void Gamewon()

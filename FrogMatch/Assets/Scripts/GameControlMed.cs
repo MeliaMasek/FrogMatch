@@ -12,9 +12,9 @@ public class GameControlMed : MonoBehaviour
     public Animator GameWon;
     public AudioSource MatchSound;
     public AudioSource NoMatchSound;
-
     public AudioSource GameOverSound;
-
+    public bool activePlay;
+    
     List<int> frontIndex = new() { 0, 0, 1, 1, 2, 3, 4, 5, 6, 0, 0, 1, 1, 2, 3, 4, 5, 6};
     public static System.Random rnd = new();
     public int shuffleNum = 0;
@@ -31,6 +31,7 @@ public class GameControlMed : MonoBehaviour
 
     public void Start()
     {
+        activePlay = true;
         Gameover.Play("GameoverOff");
         GameWon.Play("GameWonOff");
         int startTotal = frontIndex.Count;
@@ -88,6 +89,11 @@ public class GameControlMed : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         //if (Input.GetTouch(0).phase == TouchPhase.Began)
+            if (activePlay == false)
+            {
+                return;
+            }
+        
         {
             clicks++;
             scoreLabel.text = " " + (35 - clicks);
@@ -129,6 +135,7 @@ public class GameControlMed : MonoBehaviour
     {
         Gameover.Play("GameoverOn");
         GameOverSound.Play();
+        activePlay = false;
     }
     
     private void Gamewon()

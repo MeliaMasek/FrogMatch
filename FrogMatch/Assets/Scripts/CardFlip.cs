@@ -12,11 +12,16 @@ public class CardFlip : MonoBehaviour
     public Sprite[] fronts;
     public Sprite back;
     public int frontIndex;
-
+    
     public bool matched = false;
 
     public void OnMouseDown()
     {
+        if (gamecontrol.GetComponent<GameControl>().activePlay == false)
+        {
+            return;
+        }
+        
         if (matched == false)
         {
             GameControl controlScript = gamecontrol.GetComponent<GameControl>();

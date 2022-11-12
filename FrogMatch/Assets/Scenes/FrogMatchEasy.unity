@@ -522,10 +522,9 @@ GameObject:
   - component: {fileID: 479678185}
   - component: {fileID: 479678186}
   - component: {fileID: 479678181}
-  - component: {fileID: 479678187}
   m_Layer: 0
   m_Name: GameControl
-  m_TagString: Untagged
+  m_TagString: Card
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -548,6 +547,7 @@ MonoBehaviour:
   MatchSound: {fileID: 479678183}
   NoMatchSound: {fileID: 479678186}
   GameOverSound: {fileID: 479678185}
+  activePlay: 0
   shuffleNum: 0
   scoreLabel: {fileID: 1217909725}
   scoreLabelHigh: {fileID: 11400000, guid: 0b7241197eff01244ba89835bc99c717, type: 2}
@@ -951,18 +951,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &479678187
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 479678180}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c4161df5d4f82d49864213a63ad1164, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -2808,6 +2796,10 @@ PrefabInstance:
       value: 56.204765
       objectReference: {fileID: 0}
     - target: {fileID: 6941399733482009831, guid: 9f2bac62c50f5e144bb1dc1b3cc08e9b, type: 3}
+      propertyPath: m_Size.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941399733482009831, guid: 9f2bac62c50f5e144bb1dc1b3cc08e9b, type: 3}
       propertyPath: m_Center.x
       value: 0.07174911
       objectReference: {fileID: 0}
@@ -2817,6 +2809,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6941399733482009850, guid: 9f2bac62c50f5e144bb1dc1b3cc08e9b, type: 3}
       propertyPath: m_Name
+      value: Card
+      objectReference: {fileID: 0}
+    - target: {fileID: 6941399733482009850, guid: 9f2bac62c50f5e144bb1dc1b3cc08e9b, type: 3}
+      propertyPath: m_TagString
       value: Card
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -18,6 +18,11 @@ public class CardFlipHard : MonoBehaviour
 
     public void OnMouseDown()
     {
+        if (gamecontrol.GetComponent<GameControlHard>().activePlay == false)
+        {
+            return;
+        }
+        
         if (matched == false)
         {
             GameControlHard controlScript = gamecontrol.GetComponent<GameControlHard>();
