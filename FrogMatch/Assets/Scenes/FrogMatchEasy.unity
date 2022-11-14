@@ -341,7 +341,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 58b1476809a2f7d4b90d862b7c3923a7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0b04666ec4681a342b4bdb227b808403, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1924,7 +1924,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 20
+          m_IntArgument: 30
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2758,7 +2758,7 @@ PrefabInstance:
     - target: {fileID: 6941399733482009827, guid: 9f2bac62c50f5e144bb1dc1b3cc08e9b, type: 3}
       propertyPath: back
       value: 
-      objectReference: {fileID: 21300000, guid: 04e8aa025d1ff8747b8ae92503f8aaff, type: 3}
+      objectReference: {fileID: 21300000, guid: 64ed36e6965f1c24c8d1c0125402316b, type: 3}
     - target: {fileID: 6941399733482009827, guid: 9f2bac62c50f5e144bb1dc1b3cc08e9b, type: 3}
       propertyPath: card
       value: 
@@ -2766,27 +2766,27 @@ PrefabInstance:
     - target: {fileID: 6941399733482009827, guid: 9f2bac62c50f5e144bb1dc1b3cc08e9b, type: 3}
       propertyPath: fronts.Array.data[0]
       value: 
-      objectReference: {fileID: 21300000, guid: dfd6dbe42e950c340a4106dd03c29573, type: 3}
+      objectReference: {fileID: 21300000, guid: 90213f6bebd57bf409053a3ddd13c754, type: 3}
     - target: {fileID: 6941399733482009827, guid: 9f2bac62c50f5e144bb1dc1b3cc08e9b, type: 3}
       propertyPath: fronts.Array.data[1]
       value: 
-      objectReference: {fileID: 21300000, guid: 775e2f4f07515f3418aace1d31f744e4, type: 3}
+      objectReference: {fileID: 21300000, guid: d28feca339b63ad4d8fa72c2f56c60e2, type: 3}
     - target: {fileID: 6941399733482009827, guid: 9f2bac62c50f5e144bb1dc1b3cc08e9b, type: 3}
       propertyPath: fronts.Array.data[2]
       value: 
-      objectReference: {fileID: 21300000, guid: ecfabf97188d7d7458cf4bc0ff58d872, type: 3}
+      objectReference: {fileID: 21300000, guid: 5f0aeb24c87c98a49ab87db5c53f74b9, type: 3}
     - target: {fileID: 6941399733482009827, guid: 9f2bac62c50f5e144bb1dc1b3cc08e9b, type: 3}
       propertyPath: fronts.Array.data[3]
       value: 
-      objectReference: {fileID: 21300000, guid: b0f5d481f036a97428d064cb5dd3f3b6, type: 3}
+      objectReference: {fileID: 21300000, guid: 775e2f4f07515f3418aace1d31f744e4, type: 3}
     - target: {fileID: 6941399733482009827, guid: 9f2bac62c50f5e144bb1dc1b3cc08e9b, type: 3}
       propertyPath: fronts.Array.data[4]
       value: 
-      objectReference: {fileID: 21300000, guid: 13fff0535c6710043b7a4145bbbb7851, type: 3}
+      objectReference: {fileID: 21300000, guid: 94964337c60a7a54aab51809d94c93f6, type: 3}
     - target: {fileID: 6941399733482009829, guid: 9f2bac62c50f5e144bb1dc1b3cc08e9b, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 04e8aa025d1ff8747b8ae92503f8aaff, type: 3}
+      objectReference: {fileID: 21300000, guid: 64ed36e6965f1c24c8d1c0125402316b, type: 3}
     - target: {fileID: 6941399733482009831, guid: 9f2bac62c50f5e144bb1dc1b3cc08e9b, type: 3}
       propertyPath: m_Size.x
       value: 43.333233

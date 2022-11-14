@@ -96,7 +96,7 @@ public class GameControlMed : MonoBehaviour
         
         {
             clicks++;
-            scoreLabel.text = " " + (35 - clicks);
+            scoreLabel.text = " " + (40 - clicks);
         }
 
         if (cardOne != null && cardTwo != null && cardOne.frontIndex == cardTwo.frontIndex)
@@ -142,11 +142,11 @@ public class GameControlMed : MonoBehaviour
     {
         GameWon.Play("GameWonOn");
         Gameover.Play("GameoverOff");
-        if (clicks > (35 - clicks))
+        if (clicks > (40 - clicks))
         {
-            if (scoreLabelHigh.value < (35 - clicks))
+            if (scoreLabelHigh.value < (40 - clicks))
             {
-                scoreLabelHigh.value = (35 - clicks);
+                scoreLabelHigh.value = (40 - clicks);
             }
         }
     }
