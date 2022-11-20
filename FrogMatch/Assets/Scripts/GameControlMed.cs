@@ -36,8 +36,8 @@ public class GameControlMed : MonoBehaviour
         Gameover.Play("GameoverOff");
         GameWon.Play("GameWonOff");
         int startTotal = frontIndex.Count;
-        float xPos = -1.87f;
-        float yPos = 1f;
+        float xPos = -3.48f;
+        float yPos = 2.59f;
         for (int i = 0; i < (startTotal - 1); i++)
         {
             shuffleNum = rnd.Next(0, (frontIndex.Count));
@@ -45,12 +45,12 @@ public class GameControlMed : MonoBehaviour
             temp.GetComponent<CardFlipMed>().frontIndex = frontIndex[shuffleNum];
             temp.GetComponent<CardFlipMed>().name = "card" + i;
             frontIndex.Remove(frontIndex[shuffleNum]);
-            xPos = xPos + 1.25f;
+            xPos = xPos + 2.5f;
 
             if(i == 4 || i == 10)
             {
-                xPos = -3.12f;
-                yPos = yPos - 1.75f;
+                xPos = -5.98f;
+                yPos = yPos -2.5f;
             }
         }
         card.GetComponent<CardFlipMed>().frontIndex = frontIndex[0];
@@ -144,12 +144,10 @@ public class GameControlMed : MonoBehaviour
     {
         GameWon.Play("GameWonOn");
         Gameover.Play("GameoverOff");
-        if (clicks > (40 - clicks))
+        
+        if (scoreLabelHigh.value < (40 - clicks))
         {
-            if (scoreLabelHigh.value < (40 - clicks))
-            {
-                scoreLabelHigh.value = (40 - clicks);
-            }
+            scoreLabelHigh.value = (40 - clicks);
         }
     }
 
