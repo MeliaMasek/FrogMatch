@@ -14,6 +14,7 @@ public class GameControlHard : MonoBehaviour
     public AudioSource NoMatchSound;
     public AudioSource GameOverSound;
     public bool activePlay;
+    public ParticleSystem partSys;
     
     List<int> frontIndex = new() { 0, 0, 1, 1, 2, 3, 4, 5, 6, 7, 7, 8, 0, 0, 1, 1, 2, 3, 4, 5, 6, 7, 7, 8};
     public static System.Random rnd = new();
@@ -123,6 +124,7 @@ public class GameControlHard : MonoBehaviour
         if (pairsLabel.text == " " + (12))
         {
             Gamewon();
+            PartSystem();
         }
     }
 
@@ -147,5 +149,10 @@ public class GameControlHard : MonoBehaviour
         {
             scoreLabelHigh.value = (50 - clicks);
         }
+    }
+    
+    public void PartSystem()
+    {
+        GameObject.Find("GameControl").GetComponent<ParticleSystem>().Play();
     }
 }
