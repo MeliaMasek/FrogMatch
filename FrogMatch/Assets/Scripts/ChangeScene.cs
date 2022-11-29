@@ -13,7 +13,7 @@ public class ChangeScene : MonoBehaviour
     
     IEnumerator DelaySceneLoad(int sceneID)
     {
-        yield return new WaitForSeconds(.25f);
+        yield return new WaitForSeconds(.75f);
         SceneManager.LoadScene(sceneID);
     }
 }
