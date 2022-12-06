@@ -9,7 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e82d515da6960c8448148f8bb6187abb, type: 3}
-  m_Name: HighScoreEasy
+  m_Script: {fileID: 11500000, guid: 856699702ef3ff740a8e836258f465d7, type: 3}
+  m_Name: DataStorageMedium
   m_EditorClassIdentifier: 
-  value: 18
+  data: {fileID: 11400000, guid: 5b41944c5a62af643b51447c2bbdfc59, type: 2}
+  listData: []

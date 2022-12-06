@@ -4,8 +4,19 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "DataStorage", menuName = "Utilities/Data Storage Object")]
 public class SaveData : ScriptableObject
 {
+    //public GameAction getGameActionObj, setGameActionObj;
     public ScriptableObject data;
     public List<ScriptableObject> listData;
+
+    private void GetOnRaise()
+    {
+        GetData(data);
+    }
+    
+    private void SetOnRaise()
+    {
+        SetData(data);
+    }
 
     public void SetListData()
     {
@@ -28,6 +39,12 @@ public class SaveData : ScriptableObject
         if (obj == null) return;
         PlayerPrefs.SetString(obj.name, JsonUtility.ToJson(obj));
     }
+    
+    public void SetData(MonoBehaviour obj)
+    {
+        if (obj == null) return;
+        PlayerPrefs.SetString(obj.name, JsonUtility.ToJson(obj));
+    }
 
     public void SetData()
     {
@@ -36,6 +53,13 @@ public class SaveData : ScriptableObject
     }
     
     public void GetData(ScriptableObject obj)
+    {
+        if (obj == null) return;
+        if (!string.IsNullOrEmpty(PlayerPrefs.GetString(obj.name)))
+            JsonUtility.FromJsonOverwrite(PlayerPrefs.GetString(obj.name), obj);
+    }
+    
+    public void GetData(MonoBehaviour obj)
     {
         if (obj == null) return;
         if (!string.IsNullOrEmpty(PlayerPrefs.GetString(obj.name)))

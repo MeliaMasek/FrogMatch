@@ -1,12 +1,9 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class MonoEventsBehavior : MonoBehaviour
 {
-    public UnityEvent startEvent, awakeEvent, disableEvent;
+    public UnityEvent startEvent, awakeEvent, disableEvent, applicationQuitEvent;
 
     private void Awake()
     {
@@ -21,5 +18,10 @@ public class MonoEventsBehavior : MonoBehaviour
     private void OnDisable()
     {
         disableEvent.Invoke();
+    }
+    
+    private void OnApplicationQuit()
+    {
+        applicationQuitEvent.Invoke();
     }
 }
