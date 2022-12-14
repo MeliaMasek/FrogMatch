@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 856699702ef3ff740a8e836258f465d7, type: 3}
   m_Name: DataStorageEasy
   m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: 0b7241197eff01244ba89835bc99c717, type: 2}
-  listData: []
+  data: {fileID: 0}
+  listData:
+  - {fileID: 11400000, guid: 0b7241197eff01244ba89835bc99c717, type: 2}
+  - {fileID: 11400000, guid: 69a1e46af801e104dbb68f63536797da, type: 2}

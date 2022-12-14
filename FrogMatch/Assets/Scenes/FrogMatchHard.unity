@@ -1911,7 +1911,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1814439134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1919,7 +1919,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1814439133}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9c3c8c01e1846434a9d6fd85ebef7205, type: 3}
   m_Name: 
@@ -1932,7 +1932,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 11400000, guid: beb31511053c9544492cd6c49c8da885, type: 2}
         m_TargetAssemblyTypeName: SaveData, Assembly-CSharp
-        m_MethodName: GetData
+        m_MethodName: GetListData
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1950,7 +1950,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 11400000, guid: beb31511053c9544492cd6c49c8da885, type: 2}
         m_TargetAssemblyTypeName: SaveData, Assembly-CSharp
-        m_MethodName: SetData
+        m_MethodName: SetListData
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
